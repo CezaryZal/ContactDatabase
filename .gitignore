@@ -139,7 +139,7 @@ local.properties
 .worksheet
 .idea/
 target/
-resource/
+resources/
 *.iml
 .mvn/
 mvnw
