@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
 
-@WebServlet("/*")
+@WebServlet("/test")
 public class TestDBServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
