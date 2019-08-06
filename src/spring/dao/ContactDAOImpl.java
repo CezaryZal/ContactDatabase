@@ -17,7 +17,6 @@ public class ContactDAOImpl implements ContactDAO {
     private SessionFactory sessionFactory;
 
     @Override
-    @Transactional
     public List<Contact> getContacts() {
 
         Session currentSession = sessionFactory.getCurrentSession();

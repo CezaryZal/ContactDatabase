@@ -6,11 +6,16 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% response.sendRedirect("contact/list"); %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>Contact Database</title>
   </head>
   <body>
-  $END$
+  Hi,
+  <br>
+  If you want to see our contact database, click button.
+  <br>
+  (In future)
   </body>
 </html>

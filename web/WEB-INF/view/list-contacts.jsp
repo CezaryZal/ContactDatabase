@@ -12,13 +12,15 @@
 <head>
     <title>List Contacts</title>
 
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/htmlStyle/css/style.css" />
+
 </head>
 
 <body>
 
 <div id="wrapper">
     <div id="header">
-        <h2>CRM - Customer Relationship Manager</h2>
+        <h2>Contact Database </h2>
     </div>
 </div>
 
