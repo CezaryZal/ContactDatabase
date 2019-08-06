@@ -20,9 +20,16 @@ public class ContactDAOImpl implements ContactDAO {
     public List<Contact> getContacts() {
 
         Session currentSession = sessionFactory.getCurrentSession();
-        Query<Contact> theQuery = currentSession.createQuery("from Contact", Contact.class);
+        Query<Contact> theQuery = currentSession.createQuery("from Contact order by lastName", Contact.class);
         List<Contact> contacts = theQuery.getResultList();
 
         return contacts;
+    }
+
+    @Override
+    public void saveContact(Contact contact) {
+
+        Session currentSession = sessionFactory.getCurrentSession();
+        currentSession.save(contact);
     }
 }

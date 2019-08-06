@@ -28,6 +28,10 @@
 
     <div id="content">
 
+        <input type="button" value="Add Contact"
+               onclick="window.location.href='showFromForAdd'; return false;"
+               class="add-button" />
+
         <table>
             <tr>
                 <th>First Name</th>
@@ -43,7 +47,6 @@
                     <td> ${tempContact.lastName} </td>
                     <td> ${tempContact.email} </td>
                     <td> ${tempContact.phoneNumber} </td>
-
                 </tr>
 
             </c:forEach>

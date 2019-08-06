@@ -30,21 +30,20 @@ tr {
 tr:nth-child(even) {background: #FFFFFF}
 tr:nth-child(odd) {background: #BBBBBB}	
  
-#wrapper { width: 100%; margin-top: 0px; text-align: center;}
+#wrapper { width: 100%; text-align: center;}
 #header {max-width: 1200px; width: 95%; background: #4682B4; margin:auto; padding:15px 0px 15px 15px; }
 #header h2 { width: 100%; margin:auto; color: #FFFFFF;}
-#container {margin:auto; padding: 15px }
+#container {max-width: 1200px; margin:auto; padding: 15px }
 #container h3 {color: #000;}
-#container #content {margin-top: 20px;}
+#container #content {margin-top: 5px;}
 
 .add-button {
 	border: 1px solid #666; 
-	border-radius: 5px; 
-	padding: 4px; 
+	border-radius: 5px;
 	font-size: 12px;
 	font-weight: bold;
 	width: 120px; 
-	padding: 5px 10px; 
+	padding: 5px 10px;
 	
 	margin-bottom: 15px;
 	background: #cccccc;
