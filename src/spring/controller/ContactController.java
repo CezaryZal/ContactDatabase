@@ -3,10 +3,7 @@ package spring.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import spring.dao.ContactDAO;
 import spring.entity.Contact;
 import spring.service.ContactService;
@@ -46,5 +43,12 @@ public class ContactController {
         return "redirect:/contact/list";
     }
 
+    @GetMapping("/showFormForUpdate")
+    public String showFromForUpdate(@RequestParam("contactId") int id, Model model){
 
+        Contact contact = service.getContact(id);
+        model.addAttribute("contact", contact);
+        return "add-contact";
+
+    }
 }

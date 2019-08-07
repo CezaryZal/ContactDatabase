@@ -9,4 +9,6 @@ public interface ContactService {
     void saveContact(Contact contact);
 
     List<Contact> getContacts();
+
+    public Contact getContact(int id);
 }

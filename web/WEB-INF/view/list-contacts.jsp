@@ -38,15 +38,26 @@
                 <th>Last Name</th>
                 <th>Email</th>
                 <th>Phone Number</th>
+                <th>Action</th>
             </tr>
 
             <c:forEach var="tempContact" items="${contacts}">
+
+                <c:url var = "updateLink" value="/contact/showFormForUpdate">
+                    <c:param name="contactId" value="${tempContact.id}"/>
+                </c:url>
 
                 <tr>
                     <td> ${tempContact.firstName} </td>
                     <td> ${tempContact.lastName} </td>
                     <td> ${tempContact.email} </td>
                     <td> ${tempContact.phoneNumber} </td>
+
+<%--     example    http://localhost:8081/ContactDatabase_war_exploded/contact/showFromForAdd?contactId=1--%>
+                    <td>
+                    <!-- display the update link -->
+                        <a href="${updateLink}">Update</a>
+                    </td>
                 </tr>
 
             </c:forEach>

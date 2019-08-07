@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import spring.entity.Contact;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
@@ -30,6 +29,14 @@ public class ContactDAOImpl implements ContactDAO {
     public void saveContact(Contact contact) {
 
         Session currentSession = sessionFactory.getCurrentSession();
-        currentSession.save(contact);
+        currentSession.saveOrUpdate(contact);
+    }
+
+    @Override
+    public Contact getContact(int id) {
+        Session currentSession = sessionFactory.getCurrentSession();
+        Contact contact = currentSession.get(Contact.class, id);
+
+        return contact;
     }
 }

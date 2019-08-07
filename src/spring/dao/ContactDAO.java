@@ -9,5 +9,7 @@ public interface ContactDAO {
     List<Contact> getContacts();
 
     void saveContact(Contact contact);
+
+    public Contact getContact(int id);
 }
 
