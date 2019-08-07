@@ -49,6 +49,11 @@ public class ContactController {
         Contact contact = service.getContact(id);
         model.addAttribute("contact", contact);
         return "add-contact";
+    }
 
+    @GetMapping("/delete")
+    public String deleteContact(@RequestParam("contactId") int id) {
+        service.deleteContact(id);
+        return "redirect:/contact/list";
     }
 }
