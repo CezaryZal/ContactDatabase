@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import spring.dao.ContactDAO;
 import spring.entity.Contact;
 import spring.service.ContactService;
 
@@ -55,5 +54,14 @@ public class ContactController {
     public String deleteContact(@RequestParam("contactId") int id) {
         service.deleteContact(id);
         return "redirect:/contact/list";
+    }
+
+    @GetMapping("/search")
+    public String searchCustomers(@RequestParam("searchName") String searchName, Model model) {
+
+        List<Contact> contacts = service.searchContacts(searchName);
+        model.addAttribute("contacts", contacts);
+
+        return "list-contacts";
     }
 }
