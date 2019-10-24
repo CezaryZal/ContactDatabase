@@ -1,7 +1,6 @@
 package testDB;
 
 import java.sql.*;
-import java.util.HashSet;
 
 public class ConnectDB {
     public static void main (String [] args){

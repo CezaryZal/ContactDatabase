@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import spring.entity.Contact;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Repository
@@ -71,7 +70,6 @@ public class ContactDAOImpl implements ContactDAO {
         // execute query and get result list
         List<Contact> contacts = query.getResultList();
 
-        System.out.println("Lista wybrana" + Arrays.toString(contacts.toArray()));
         return contacts;
     }
 }
