@@ -15,7 +15,7 @@
 
   If you want see your contact database, click button.
   <br>
-  <input type="button" value="List contacts"
+  <input type="button" value="Contacts List"
          onclick="window.location.href='contact/list'; "
   style="background-color: chocolate;
          border: 1px solid #666;

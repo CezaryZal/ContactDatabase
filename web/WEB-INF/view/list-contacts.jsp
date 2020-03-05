@@ -11,7 +11,7 @@
 
 <html>
 <head>
-    <title>List Contacts</title>
+    <title>Contacts List</title>
 
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/htmlStyle/css/style.css" />
 
@@ -21,7 +21,7 @@
 
 <div id="wrapper">
     <div id="header">
-        <h2>Contact Database </h2>
+        <h2>Contact Database</h2>
     </div>
 </div>
 
